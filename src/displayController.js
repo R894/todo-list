@@ -6,13 +6,13 @@ class DisplayController{
     }
 
     displayNavProjectButtons(projects){
+        this.nav.textContent = '';
         projects.forEach(proj => {
             let btn = document.createElement('button');
-            btn.classList.add(`data='${projects.indexOf(proj)}'`);
+            btn.setAttribute('data', projects.indexOf(proj));
             btn.textContent = proj.getName();
             this.nav.appendChild(btn);
         });
-        
     }
 
     displayProject(project){
@@ -36,10 +36,10 @@ class DisplayController{
         dueDate.classList.add('due-date');
         prio.classList.add('prio');
 
-        name.textContent = task.getName();
-        desc.textContent = task.getDesc();
-        dueDate.textContent = task.getDueDate();
-        prio.textContent = task.getPrio();
+        name.textContent = `Name: ${task.getName()}`;
+        desc.textContent = `Description: ${task.getDesc()}`;
+        dueDate.textContent = `Due: ${task.getDueDate()}`;
+        prio.textContent = `Priority: ${task.getPrio()}`;
 
         taskDiv.appendChild(name);
         taskDiv.appendChild(desc);

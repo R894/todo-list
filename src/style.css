@@ -21,6 +21,9 @@ body{
     flex-direction: column;
     gap: 0.5rem;
 }
+.side-nav input{
+    max-width: 100px;
+}
 
 .content{
     display: flex;
@@ -29,12 +32,12 @@ body{
 
 .task-list{
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
 }
 
 .task{
     background-color: green;
+    flex-wrap: wrap;
     min-width: 200px;
     margin: 0.5rem;
     padding: 0.5rem;
