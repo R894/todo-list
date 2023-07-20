@@ -1,6 +1,12 @@
 html, body{
     margin: 0;
     padding: 0;
+    height: 100vh;
+}
+
+body{
+    display:flex;
+    flex-direction: column;
 }
 
 .header{
@@ -18,6 +24,7 @@ html, body{
 
 .content{
     display: flex;
+    flex-grow: 1;
 }
 
 .task-list{
@@ -30,5 +37,50 @@ html, body{
     background-color: green;
     min-width: 200px;
     margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.modal{
+    display: none;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+form{
+    margin: 0;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    display:flex;
+    flex-direction: column;
+}
+
+button{
+    border: 0;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+button:hover{
+    background-color: brown;
+}
+
+#add-task{
+    margin-left: 0.5rem;
+}
+
+.footer{
+    background-color: gray;
+    display: flex;
+    justify-content: center;
     padding: 0.5rem;
 }
