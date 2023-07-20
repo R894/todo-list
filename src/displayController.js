@@ -2,6 +2,17 @@ class DisplayController{
 
     constructor(){
         this.taskList = document.querySelector('.task-list');
+        this.nav = document.querySelector('.project-btns');
+    }
+
+    displayNavProjectButtons(projects){
+        projects.forEach(proj => {
+            let btn = document.createElement('button');
+            btn.classList.add(`data='${projects.indexOf(proj)}'`);
+            btn.textContent = proj.getName();
+            this.nav.appendChild(btn);
+        });
+        
     }
 
     displayProject(project){

@@ -3,21 +3,20 @@ import Project from './project';
 import Task from './task';
 import DisplayController from './displayController';
 
-
+let projects = [];
 let p = new Project("My Project");
+projects.push(p);
 
-p.addTask(new Task("name","desc", "tomorrow", "critical"));
-p.addTask(new Task("name","desc", "tomorrow", "critical"));
-p.addTask(new Task("name","desc", "tomorrow", "critical"));
-p.addTask(new Task("name","desc", "tomorrow", "critical"));
-p.addTask(new Task("name","desc", "tomorrow", "critical"));
+let dede = new Project("It works lol");
+projects.push(dede);
 
-p.printAllTasks();
-console.log(p.getName());
+projects.forEach(proj => {console.log(proj.getName())});
 
 let d = new DisplayController();
 
 d.displayProject(p);
+
+d.displayNavProjectButtons(projects);
 
 let addTask = document.getElementById("add-task");
 
