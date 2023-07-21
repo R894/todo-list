@@ -51,5 +51,17 @@ addProjectButton.addEventListener("click", function(){
     if(input.value != ''){
         projects.push(new Project(input.value));
         d.displayNavProjectButtons(projects);
+
+        updateListeners();
     }
 });
+
+function updateListeners(){
+    for(let i =0; i< projects.length; i++){
+        let projButton = document.querySelector(`[data='${i}']`);
+    
+        projButton.addEventListener("click", function(){
+            d.displayProject(projects[i]);
+        });
+    }
+}
