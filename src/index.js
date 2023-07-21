@@ -3,6 +3,8 @@ import Project from './project';
 import Task from './task';
 import DisplayController from './displayController';
 
+
+let currentSelectedProject = 0;
 let projects = [];
 let p = new Project("My Project");
 projects.push(p);
@@ -35,12 +37,12 @@ submitButton.addEventListener("click", function(e){
         return;
     }
 
-    p.addTask(new Task(name, desc, due, prio));
+    projects[currentSelectedProject].addTask(new Task(name, desc, due, prio));
 
     let modal = document.querySelector('.modal');
     modal.style.display = 'none';
 
-    d.displayProject(p);
+    d.displayProject(projects[currentSelectedProject]);
 });
 
 let addProjectButton = document.querySelector('#add-project');
@@ -61,7 +63,8 @@ function updateListeners(){
         let projButton = document.querySelector(`[data='${i}']`);
     
         projButton.addEventListener("click", function(){
-            d.displayProject(projects[i]);
+            currentSelectedProject = i;
+            d.displayProject(projects[currentSelectedProject]);
         });
     }
 }
