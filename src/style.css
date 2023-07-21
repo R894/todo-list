@@ -32,11 +32,16 @@ body{
 
 .task-list{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 
 .task{
     background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
     flex-wrap: wrap;
     min-width: 200px;
     margin: 0.5rem;

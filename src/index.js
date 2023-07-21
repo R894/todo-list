@@ -37,7 +37,10 @@ submitButton.addEventListener("click", function(e){
         return;
     }
 
-    projects[currentSelectedProject].addTask(new Task(name, desc, due, prio));
+    let newTask = new Task(name, desc, due, prio);
+    newTask.setProject(projects[currentSelectedProject]);
+    
+    projects[currentSelectedProject].addTask(newTask);
 
     let modal = document.querySelector('.modal');
     modal.style.display = 'none';

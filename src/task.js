@@ -4,6 +4,12 @@ class Task{
         this.desc = desc;
         this.dueDate = dueDate;
         this.prio = prio;
+        this.removed = false;
+        this.project = '';
+    }
+
+    setProject(project){
+        this.project = project;
     }
 
     getName(){
@@ -40,6 +46,10 @@ class Task{
 
     printTask(){
         console.log(`${this.name} ${this.desc} ${this.dueDate} ${this.prio}`)
+    }
+
+    removeTask(){
+        this.project.removeTask(this);
     }
 }
 

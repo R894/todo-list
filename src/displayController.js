@@ -19,7 +19,7 @@ class DisplayController{
         this.taskList.textContent = '';
         let taskList = project.getTaskList();
         taskList.forEach(task => {
-            this.displayTask(task)
+            this.displayTask(task);
         });
     }
 
@@ -29,6 +29,10 @@ class DisplayController{
         let desc = document.createElement('div');
         let dueDate = document.createElement('div');
         let prio = document.createElement('div');
+        let checkbox = document.createElement('input');
+        let removeBtn = document.createElement('button');
+
+        checkbox.type = "checkbox";
 
         taskDiv.classList.add('task');
         name.classList.add('name');
@@ -40,11 +44,19 @@ class DisplayController{
         desc.textContent = `Description: ${task.getDesc()}`;
         dueDate.textContent = `Due: ${task.getDueDate()}`;
         prio.textContent = `Priority: ${task.getPrio()}`;
+        removeBtn.textContent = 'Remove';
 
+        taskDiv.appendChild(checkbox);
         taskDiv.appendChild(name);
         taskDiv.appendChild(desc);
         taskDiv.appendChild(dueDate);
         taskDiv.appendChild(prio);
+        taskDiv.appendChild(removeBtn);
+
+        removeBtn.addEventListener("click", function(){
+            task.removeTask();
+            taskDiv.remove();
+        });
 
         this.taskList.appendChild(taskDiv);
     }

@@ -16,6 +16,10 @@ class Project{
         this.taskList.push(task);
     }
 
+    removeTask(task){
+        this.taskList.pop(task);
+    }
+
     getTaskList(){
         return this.taskList;
     }
