@@ -1,32 +1,32 @@
-class Project{
-    constructor(name){
-        this.name = name;
-        this.taskList = [];
-    }
+class Project {
+  constructor(name) {
+    this.name = name;
+    this.taskList = [];
+  }
 
-    getName(){
-        return this.name;
-    }
+  getName() {
+    return this.name;
+  }
 
-    setName(name){
-        this.name = name;
-    }
+  setName(name) {
+    this.name = name;
+  }
 
-    addTask(task){
-        this.taskList.push(task);
-    }
+  addTask(task) {
+    this.taskList.push(task);
+  }
 
-    removeTask(task){
-        this.taskList.pop(task);
-    }
+  removeTask(task) {
+    this.taskList.pop(task);
+  }
 
-    getTaskList(){
-        return this.taskList;
-    }
+  getTaskList() {
+    return this.taskList;
+  }
 
-    printAllTasks(){
-        this.taskList.forEach(element => element.printTask());
-    }
+  printAllTasks() {
+    this.taskList.forEach((element) => element.printTask());
+  }
 }
 
 export default Project;
