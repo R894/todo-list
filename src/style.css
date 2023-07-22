@@ -1,97 +1,97 @@
-html, body{
-    margin: 0;
-    padding: 0;
-    height: 100vh;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 }
 
-body{
-    display:flex;
-    flex-direction: column;
+body {
+  display: flex;
+  flex-direction: column;
 }
 
-.header{
-    font-size: 2rem;
-    padding: 1rem;
-    background-color: gray;
+.header {
+  font-size: 2rem;
+  padding: 1rem;
+  background-color: gray;
 }
 
-.side-nav{
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.side-nav {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
-.side-nav input{
-    max-width: 100px;
-}
-
-.content{
-    display: flex;
-    flex-grow: 1;
+.side-nav input {
+  max-width: 100px;
 }
 
-.task-list{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+.content {
+  display: flex;
+  flex-grow: 1;
 }
 
-.task{
-    background-color: green;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    min-width: 200px;
-    margin: 0.5rem;
-    padding: 0.5rem;
+.task-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-.modal{
-    display: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
-
+.task {
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  min-width: 200px;
+  margin: 0.5rem;
+  padding: 0.5rem;
 }
 
-form{
-    margin: 0;
-    padding: 0.5rem;
-    gap: 0.5rem;
-    display:flex;
-    flex-direction: column;
+.modal {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
 }
 
-.project-btns{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+form {
+  margin: 0;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
-button{
-    border: 0;
-    margin: 0;
-    padding: 0.5rem;
+.project-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-button:hover{
-    background-color: brown;
+button {
+  border: 0;
+  margin: 0;
+  padding: 0.5rem;
 }
 
-#add-task{
-    margin: 0.5rem;
+button:hover {
+  background-color: brown;
 }
 
-.footer{
-    background-color: gray;
-    display: flex;
-    justify-content: center;
-    padding: 0.5rem;
+#add-task {
+  margin: 0.5rem;
+}
+
+.footer {
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
 }

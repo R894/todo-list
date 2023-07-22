@@ -1,68 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-do List</title>
     <script defer src="main.js"></script>
-</head>
-<body>
-    <div class="header">
-        Todo List
-    </div>
+  </head>
+  <body>
+    <div class="header">Todo List</div>
 
     <div class="content">
-        <div class="side-nav">
-            Projects
-            <div class="project-btns">
-
-            </div>
-            <div>
-                <input type="text" id="pname">
-                <button id="add-project">Add Project</button>
-            </div>
-            
+      <div class="side-nav">
+        Projects
+        <div class="project-btns"></div>
+        <div>
+          <input type="text" id="pname" />
+          <button id="add-project">Add Project</button>
         </div>
+      </div>
 
-        <div class="main">
-            <div class="task-list">
-            </div>
-            <button id="add-task">Add Task</button>
-        </div>
+      <div class="main">
+        <div class="task-list"></div>
+        <button id="add-task">Add Task</button>
+      </div>
     </div>
 
-    <div class="footer">
-        Check out my Github
-    </div>
+    <div class="footer">Check out my Github</div>
     <div class="modal">
-        <div class="modal-content">
-            <form method="dialog">
-                <div>
-                    <label for="tname">Name:</label>
-                    <input type="text" id="tname" name="tname"> 
-                </div>
-        
-                <div>
-                    <label for="tdesc">Description:</label>
-                    <input type="text" id="tdesc" name="tdesc">
-                </div>
-        
-                <div>
-                    <label for="tprio">Priority:</label>
-                    <input type="text" id="tprio" name="tprio">
-                </div>
-        
-                <div>
-                    <label for="tdue">Due Date:</label>
-                    <input type="text" id="tdue" name="tdue">
-                </div>
-        
-                <div>
-                    <button type="submit" id="submit">Submit</button>
-                </div>
-            </form>
-        </div>
+      <div class="modal-content">
+        <form method="dialog">
+          <div>
+            <label for="tname">Name:</label>
+            <input type="text" id="tname" name="tname" />
+          </div>
+
+          <div>
+            <label for="tdesc">Description:</label>
+            <input type="text" id="tdesc" name="tdesc" />
+          </div>
+
+          <div>
+            <label for="tprio">Priority:</label>
+            <input type="text" id="tprio" name="tprio" />
+          </div>
+
+          <div>
+            <label for="tdue">Due Date:</label>
+            <input type="text" id="tdue" name="tdue" />
+          </div>
+
+          <div>
+            <button type="submit" id="submit">Submit</button>
+          </div>
+        </form>
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>

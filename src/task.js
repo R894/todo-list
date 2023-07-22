@@ -5,7 +5,7 @@ class Task {
     this.dueDate = dueDate;
     this.prio = prio;
     this.removed = false;
-    this.project = '';
+    this.project = "";
   }
 
   setProject(project) {
