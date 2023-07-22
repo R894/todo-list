@@ -3,9 +3,10 @@ import Project from './project';
 import Task from './task';
 import DisplayController from './displayController';
 
+let projects = [];
 
 let currentSelectedProject = 0;
-let projects = [];
+
 let p = new Project("My Project");
 projects.push(p);
 
@@ -56,7 +57,7 @@ addProjectButton.addEventListener("click", function(){
     if(input.value != ''){
         projects.push(new Project(input.value));
         d.displayNavProjectButtons(projects);
-
+        
         updateListeners();
     }
 });
